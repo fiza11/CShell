@@ -34,3 +34,25 @@ A linux shell written in C language to implement various shell commands.
 - Shell supports '&' operator which lets a program run in background and displays a proper message when it exits.
 - Shell supports many manually defined commands like jobs, kjob, fg, bg, overkill, Ctrl + Z and Ctrl + C.
 - Errors are handled properly.
+
+## Commands:
+- `cd [directory]` : Change current working directory to the directory specified.
+- `pwd` : Displays the name of current working directory.
+* `echo [arguments]` : 
+  * Displays whatever is specified in [arguments].
+  * Displays the value of environment variable(ex. $USER).
+* `pinfo <pid>` :
+  * Displays process info such as status, memory and executable path about given pid.
+  * If no arguments, displays details of the shell.
+- `ls [-l -a] [directory]` : Lists all the files and directories in the specified directory.
+- `bg <job number>` : Changes a stopped background job with given job number to a running background job.
+- `fg <job number>` : Brings a running or a stopped background job with given job number to foreground.
+- `setenv var[value]` : Creates environment variable *var* if it does not exist and Sets value of *var* to *value*.
+- `unsetenv var` : Destroys environment variable *var*.
+- `jobs` : Prints a list of all background jobs(Running or Stopped) with their pid.
+- `kjob <job number> <signal number>` : Sends a signal value to a running process with the given job number.
+- `overkill` : Kills all background process at once.
+- `quit` : Exits the shell.
+- `Ctrl-Z` : Changes the status of currently running job to stop, and pushes it to the background.
+- `Ctrl-C` : Sends SIGINT signal to the current foreground job of the shell.
+
