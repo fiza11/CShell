@@ -19,7 +19,7 @@ A linux shell written in C language to implement various shell commands.
 - ls.c: Contains functions to implement ls, ls -l, ls -al, etc. commands.
 - handler.c: Contains functions to display exit status of background process.
 - signals.c : Contains user defined signal handlers.
-- delete_jobs.c : Contains function to delete the background job that has been killed from jobs structure.
+- delete.c : Contains function to delete the background job that has been killed from jobs structure.
 - env.c : Contains functions to set and unset an environment variable.
 - jobs.c : Contains functions to list all the background processes with their state and pid.
 - overkill.c : Contains function to kill all the background processes at once.
