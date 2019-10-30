@@ -15,7 +15,6 @@ void handler(int sig){
             sprintf(exit_status, "abnormally\n");
     }
     else if(WIFSIGNALED(stat)){
-        //printf("hi2");
         psignal(WTERMSIG(stat), "Exit signal");
     }
     if(pid > 0){

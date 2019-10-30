@@ -24,3 +24,23 @@ int func_fg(char **a){
      }
      return 0;
  }
+
+ void fg(int no){
+     int status, pid;
+     if(no > job_no){
+         printf("No such background process exists\n");
+     }
+     else{
+         pid_t p1 = getpid();
+         pid = job[no - 1].id;
+         signal(SIGTTOU, SIG_IGN);
+         signal(SIGTTIN, SIG_IGN);
+         tcsetpgrp(0, getpgid(pid));
+         kill(pid, SIGCONT);
+         waitpid(pid, NULL, WUNTRACED);
+         tcsetpgrp(0, p1);
+         signal(SIGTTOU, SIG_DFL);
+         signal(SIGTTIN, SIG_DFL);
+         delete_job(pid);
+     }
+ }

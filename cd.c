@@ -1,4 +1,5 @@
 #include"headers.h"
+
 void func_cd(char *path){
         int f = chdir(path);
         if(f == 0){

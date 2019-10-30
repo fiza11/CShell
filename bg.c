@@ -32,3 +32,10 @@ void func_bg(char **a){
      }
      return;
  }
+
+void bg(int no){
+    if(no > job_no){
+        printf("Enter valid job number");
+    }
+    else kill(job[no - 1].id, SIGCONT);
+}

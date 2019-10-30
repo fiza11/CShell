@@ -1,4 +1,5 @@
 #include"headers.h"
+
 void tail(FILE* in, int n){
     int count = 0;
     long int pos;
@@ -21,6 +22,7 @@ void tail(FILE* in, int n){
    }
    fclose(in);
 }
+
 void tilda(char *t, char *f){
 	int i, j, k, flag;
 	for(j = 0; j < (int)strlen(ft); j++){

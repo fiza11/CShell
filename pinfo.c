@@ -1,5 +1,5 @@
 #include"headers.h"
-//What?
+
 void func_pinfo(char **a, int flag){
     long long pid;
     if(flag == 1){
@@ -7,7 +7,6 @@ void func_pinfo(char **a, int flag){
         pid = getpid();
     }
     else{
-        //removen(a[1]);
         int fi = 1, lf = strlen(a[1]), j;
         long long sum = 0;
         for(j = lf - 1; j >= 0; j--){

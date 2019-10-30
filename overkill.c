@@ -6,7 +6,6 @@ void func_overkill(){
         pid_t pid = job[i].id;
         int u = delete_job(pid);
         int j = kill(pid, 9);
-        printf("j = %d\n", j);
         if(j == -1){
             fprintf(stderr, "%s\n", strerror(errno));
         }

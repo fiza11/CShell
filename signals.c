@@ -21,8 +21,6 @@ void ctrlz(int signum){
 }
 
 void ctrlc(int signum){
-    // fprintf(stdout,"\nPress enter to continue");
-    // fflush(stdout);
     return;
 }
 

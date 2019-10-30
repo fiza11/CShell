@@ -44,7 +44,6 @@ void func_lsdir(char *name){
     else{
         perror ("Error");
     }
-    //To free the Memory
     for(i = 0; i < no; i++){
         free(lr[i]);
     }
@@ -63,14 +62,12 @@ void func_lsa(){
     else{
         perror ("Error");
     }
-    //To free the Memory
     for(i = 0; i < no; i++){
         free(lr[i]);
     }
     free(lr);
 }
 
-//Understand this
 void func_lsl(){
     int i = 0, sum = 0;
     char timer[14];
@@ -110,7 +107,6 @@ void func_lsl(){
     else{
             printf("%sEmpty\n", WHITE);
     }
-    //To free the Memory
     for(i = 0; i < no; i++){
         free(lr[i]);
     }
@@ -152,7 +148,6 @@ void func_lsal(){
     else{
             printf("%sEmpty\n", WHITE );
     }
-    //To free the Memory
     for(i = 0; i < no; i++){
         free(lr[i]);
     }

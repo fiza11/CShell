@@ -1,6 +1,6 @@
 #include"headers.h"
 void func_redirect1(char **command){
-    char *extra[MAX_BUFF];//[MAX_BUFF];
+    char *extra[MAX_BUFF];
 	int ir = 0;
 	int i_flag = 0;
 	while(command[ir] != NULL){
@@ -123,5 +123,5 @@ void func_redirect3(char **command){
 						}
 					}
 					ir++;
-				}    
+				}
 }

@@ -32,9 +32,6 @@ void list_jobs(){
         strcat(statPath, PID);
     	strcat(statPath, STAT);
         FILE * fd = fopen(statPath, "r");
-        // char bb[1000];
-        // int aa;
-        // fscanf(fd, "%d %s %c", &aa, bb, &y);
         char c;
         char arr[100][100];
         int at = 0, b = 0;

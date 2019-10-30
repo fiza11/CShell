@@ -119,35 +119,13 @@ int main(){
 
 			}
 			else if(strcmp(command[0], "fg") == 0 && !background){
-				int status, pid;
-				if(atoi(command[1]) > job_no){
-					printf("No such background process exists\n");
-				}
-				else{
-					pid_t p1 = getpid();
-					pid = job[atoi(command[1]) - 1].id;
-					signal(SIGTTOU, SIG_IGN);
-					signal(SIGTTIN, SIG_IGN);
-					tcsetpgrp(0, getpgid(pid));
-					kill(pid, SIGCONT);
-					waitpid(pid, NULL, WUNTRACED);
-					tcsetpgrp(0, p1);
-					signal(SIGTTOU, SIG_DFL);
-					signal(SIGTTIN, SIG_DFL);
-					delete_job(pid);
-				}
+				fg(atoi(command[1]));
 			}
 			else if(strcmp(command[0], "bg") == 0 && !background){
 				if(command[1] == NULL){
 					printf("Incorrect number of arguments");
-					continue;
 				}
-				int p = atoi(command[1]);
-				if(p > job_no){
-					printf("Enter valid job number");
-					continue;
-				}
-				kill(job[p - 1].id, SIGCONT);
+				else bg(atoi(command[1]));
 			}
 			else if(strcmp(command[0], "kjob") == 0 && !background){
 				kill_job(atoi(command[1]), atoi(command[2]));

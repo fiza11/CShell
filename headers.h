@@ -49,6 +49,8 @@ void tilda(char *t, char *dest);
 void func_pinfo(char **a, int flag);
 void func_bg(char **a);
 int func_fg(char **a);
+void fg(int no);
+void bg(int no);
 char *trimwhitespace(char *str);
 void handler(int sig);
 void tail(FILE* in, int n);
@@ -69,7 +71,7 @@ void set(char **command);
 void unset(char **command);
 
 //Variable Declarations
-int size, sz;//, background = 0;
+int size, sz;
 char cwd[1000];
 int no_of_pipes;
 char ft[1000], buff[1000], fi[1000];
