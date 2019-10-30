@@ -47,8 +47,8 @@ A linux shell written in C language to implement various shell commands.
 - `ls [-l -a] [directory]` : Lists all the files and directories in the specified directory.
 - `bg <job number>` : Changes a stopped background job with given job number to a running background job.
 - `fg <job number>` : Brings a running or a stopped background job with given job number to foreground.
-- `setenv var[value]` : Creates environment variable *var* if it does not exist and Sets value of *var* to *value*.
-- `unsetenv var` : Destroys environment variable *var*.
+- `setenv var[value]` : Creates environment variable *var* if it does not exist and sets value of *var* to *value*.
+- `unsetenv var` : Destroys the environment variable *var*.
 - `jobs` : Prints a list of all background jobs(Running or Stopped) with their pid.
 - `kjob <job number> <signal number>` : Sends a signal value to a running process with the given job number.
 - `overkill` : Kills all background process at once.
