@@ -60,7 +60,6 @@ void func_echo(char ** command);
 void ctrlz(int signum);
 void ctrlc(int signum);
 void chld(int signum);
-int execute(char **command);
 void list_jobs();
 int delete_job(pid_t pid);
 void kill_job(int no, int signal);
