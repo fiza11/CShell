@@ -36,7 +36,7 @@ A linux shell written in C language to implement various shell commands.
 - Errors are handled properly.
 
 ## Commands:
-- `cd [directory]` : Change current working directory to the directory specified.
+- `cd [directory]` : Changes current working directory to the directory specified.
 - `pwd` : Displays the name of current working directory.
 * `echo [arguments]` : 
   * Displays whatever is specified in [arguments].
